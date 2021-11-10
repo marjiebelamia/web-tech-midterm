@@ -27,3 +27,5 @@ Route::get('/home', [
 
 
 Route::resource('faceBookUsers', App\Http\Controllers\FaceBookUserController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);

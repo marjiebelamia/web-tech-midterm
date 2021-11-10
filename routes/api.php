@@ -19,4 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('facebook-users',[FaceBookUserControllerAPI::class,'index']);
+Route::post('login',[FaceBookUserControllerAPI::class,'login']);
+Route::post('register',[FaceBookUserControllerAPI::class,'register']);
+Route::post('reset-password',[FaceBookUserControllerAPI::class,'resetPassword']);
