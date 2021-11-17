@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\FaceBookUserControllerAPI;
+use App\Http\Controllers\API\FacebookPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('login',[FaceBookUserControllerAPI::class,'login']);
 Route::post('register',[FaceBookUserControllerAPI::class,'register']);
 Route::post('reset-password',[FaceBookUserControllerAPI::class,'resetPassword']);
+
+
+
+Route::get('get-all-posts',[FacebookPostController::class,'getAllPosts']);
+Route::get('get-post',[FacebookPostController::class,'getPost']);
+Route::get('search-post',[FacebookPostController::class,'searchPost']);
